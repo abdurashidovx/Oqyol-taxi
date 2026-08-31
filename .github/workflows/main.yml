@@ -31,6 +31,7 @@ jobs:
         sed -i 's/package.name = myapp/package.name = oqyoltaxi/' buildozer.spec
         sed -i 's/package.domain = org.test/package.domain = org.oqyol/' buildozer.spec
         sed -i 's/requirements = python3,kivy/requirements = python3,kivy==2.2.1,kivymd==1.1.1/' buildozer.spec
+        sed -i 's/# android.accept_sdk_license = False/android.accept_sdk_license = True/' buildozer.spec
         buildozer -v android debug
 
     - name: Upload APK
